@@ -1,3 +1,35 @@
+# React Devtest
+
+## Brief
+
+We’d like you to build a website based on ​these wireframes​ that consumes data from the ​TV Maze API​. The
+first layout should use the “​Schedule​” API, and each of the Episodes should link to a “​Shows​” layout.
+
+### API URL
+
+TV Maze https://www.tvmaze.com/api
+Schedule https://www.tvmaze.com/api#schedule
+Shows https://www.tvmaze.com/api#shows
+
+### Make sure your work checks all the points below - it’s what we’ll be looking out for:
+
+- The layout should be based on the provided wireframes, however the look, feel and any interactivity is up to you - don’t be afraid to get creative!
+- Work should be submitted as a Git repository.
+- The site should be built using HTML, CSS and JavaScript, and as far as styling is concerned: SCSS, Pre/Post CSS, CSS Modules, and CSS-in-JS are all encouraged.
+- The site should be built using responsive techniques to behave well on a variety of devices.
+- The site should function as a single ​page application.
+- We encourage the use of a framework - our preference is React, and Next.js
+
+### Taking things further
+
+If you have the time, here are some suggestions to enhance the app:
+
+- The use of a build tool
+- Responsive images
+- Tests (Unit and/or end-to-end)
+- Pagination
+- Performance optimisation
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
