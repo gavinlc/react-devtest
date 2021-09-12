@@ -72,6 +72,28 @@ export interface Links {
   previousepisode: Previousepisode;
 }
 
+export interface Embedded {
+  cast: CastItem[];
+}
+
+export interface CastItem {
+  person: Person;
+  character: Character;
+  self: boolean;
+  voice: boolean;
+}
+
+export interface Person {
+  id: number;
+  name: string;
+  image: Image;
+}
+
+export interface Character {
+  id: number;
+  name: string;
+}
+
 export interface Show {
   id: number;
   url: string;
@@ -93,6 +115,7 @@ export interface Show {
   summary: string;
   updated: number;
   _links: Links;
+  _embedded: Embedded;
 }
 
 export interface Series {

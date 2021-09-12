@@ -1,6 +1,6 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -8,15 +8,19 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-`
+
+  h1 {
+    margin-top: 0;
+  }
+`;
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    primary: "#0070f3",
   },
-}
+};
 
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -26,6 +30,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  )
+  );
 }
-export default MyApp
+export default MyApp;

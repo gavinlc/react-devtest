@@ -21,13 +21,11 @@ const ShowOverviewWrapper = styled.li`
     margin-right: 5%;
     margin-bottom: 1rem;
 
-    :nth-child(even){
+    :nth-child(even) {
       margin-right: 0;
       margin-left: 5%;
     }
-
   }
-
 `;
 
 const ImageWrapper = styled.div`
@@ -58,10 +56,8 @@ export default function ShowOverview({ show }: Props) {
     <ShowOverviewWrapper key={show.id}>
       <Link as={`/show/${show.id}`} href={`/show/${show.id}`}>
         <a aria-label={show.name}>
-          <ImageWrapper>
-            {image}
-          </ImageWrapper>
-          <StarRating rating={rating} />
+          <ImageWrapper>{image}</ImageWrapper>
+          <StarRating rating={rating} showRating={false} />
           <ShowName>{show.name}</ShowName>
         </a>
       </Link>
