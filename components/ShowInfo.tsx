@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../lib/media";
 import { Schedule } from "../model/Show";
 import ListItem from "./ListItem";
 
@@ -12,6 +13,10 @@ type Props = {
 const ShowInfoContainer = styled.div`
   padding: 4rem;
   flex-basis: 50%;
+  @media ${device.mobile} {
+    padding: 2rem 2rem 0 2rem;
+    flex-basis: 100%;
+  }
 `;
 
 export default function ShowInfo({ channel, schedule, status, genres }: Props) {

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styled from "styled-components";
+import { device } from "../lib/media";
 import StarRating from "./StarRating";
 
 type Props = {
@@ -17,19 +18,31 @@ const PageTitle = styled.h1`
 const ShowHeaderContainer = styled.div`
   background: #e6e6e6;
   padding: 4rem;
+  @media ${device.mobile} {
+    padding: 2rem;
+  }
 `;
 
 const ShowInfo = styled.div`
   display: flex;
+  @media ${device.mobile} {
+    flex-direction: column;
+  }
 `;
 
 const ImageContainer = styled.div`
   width: 200px;
   margin-right: 4rem;
+  @media ${device.mobile} {
+    width: 100%;
+  }
 `;
 
 const ContentContainer = styled.div`
   max-width: 70%;
+  @media ${device.mobile} {
+    max-width: 100%;
+  }
 `;
 
 const Title = styled.h2`

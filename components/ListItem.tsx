@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { device } from "../lib/media";
 
 const ListItemContainer = styled.div`
   display: flex;
@@ -9,6 +10,10 @@ const ListItemContainer = styled.div`
   padding-bottom: 1rem;
   margin: 1rem 0;
   height: 4rem;
+
+  @media ${device.mobile} {
+    border-bottom: none;
+  }
 `;
 
 const Item = styled.dl`
@@ -17,6 +22,10 @@ const Item = styled.dl`
   width: 100%;
   margin: 0;
   align-items: center;
+  @media ${device.mobile} {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -29,11 +38,17 @@ const ImageContainer = styled.div`
 
 const ItemTitle = styled.dt`
   width: 33%;
+  @media ${device.mobile} {
+    width: 100%;
+  }
 `;
 const ItemDefinition = styled.dd`
   margin-left: auto;
   width: 66%;
   color: #666666;
+  @media ${device.mobile} {
+    width: 100%;
+  }
 `;
 
 type Props = {

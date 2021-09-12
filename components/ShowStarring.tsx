@@ -1,10 +1,15 @@
 import styled from "styled-components";
+import { device } from "../lib/media";
 import { CastItem } from "../model/Show";
 import ListItem from "./ListItem";
 
 const ShowStarringContainer = styled.div`
   padding: 4rem;
   flex-basis: 50%;
+  @media ${device.mobile} {
+    padding: 0 2rem 2rem 2rem;
+    flex-basis: 100%;
+  }
 `;
 
 type Props = {

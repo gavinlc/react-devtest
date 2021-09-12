@@ -5,6 +5,7 @@ import ShowInfo from "../../components/ShowInfo";
 import ShowStarring from "../../components/ShowStarring";
 
 import { getAllShows } from "../../lib/api";
+import { device } from "../../lib/media";
 import { Show } from "../../model/Show";
 
 type Props = {
@@ -18,6 +19,10 @@ const ShowContent = styled.div`
   display: flex;
   background: white;
   margin-top: -7rem;
+  @media ${device.mobile} {
+    margin-top: 0;
+    flex-direction: column;
+  }
 `;
 
 export default function ShowDetails({ show }: Props) {
