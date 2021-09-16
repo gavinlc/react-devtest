@@ -36,7 +36,7 @@ export default function ShowDetails({ show }: Props) {
         title={show.name}
         rating={rating}
         description={show.summary}
-        imageSrc={show.image.medium}
+        imageSrc={show.image?.medium}
       ></ShowHeader>
       <ShowContent>
         <ShowInfo
@@ -56,9 +56,6 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
     `https://api.tvmaze.com/shows/${params.id}?embed=cast`
   );
   const show = await res.json();
-
-  console.log("ShowDetails: getStaticProps: data: ", show);
-
   return {
     props: { show },
   };
@@ -66,11 +63,7 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 
 export async function getStaticPaths() {
   const allShows = await getAllShows();
-
   const paths = allShows?.map(({ id }) => `/show/${id}`) ?? [];
-
-  console.log("ShowDetails: getStaticPaths: paths: ", paths);
-
   return {
     paths,
     fallback: true,
